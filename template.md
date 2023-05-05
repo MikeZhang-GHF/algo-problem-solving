@@ -6,6 +6,9 @@
 ### [Q1]
 #### Solution:
 
+- Key words:
+  >
+
 - High Level:
   > 
 
@@ -49,7 +52,13 @@
 
 #### Related Problems:
 
-- 
+- [Q]
+  
+  ```python
+  ```
+
+  ```java
+  ```
 
 ## Go
 **Go! Grow together**
