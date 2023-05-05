@@ -10,7 +10,7 @@
   > 
 
 - Algorithm Knowledge:
-  > practice recursion
+  > 
 
 - Code Tricks:
   > 
