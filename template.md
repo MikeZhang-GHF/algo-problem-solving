@@ -1,16 +1,20 @@
 ## Algorithm Problem Solving Workout
+
 **05/04/2023**
+
 ### Q1: Get all numbers from a string
->-input: a string, could be **null**
->-output: a list of numbers(string)
->come at least two methods to solve this problem.
+> - input: a string, could be **null**
+> - output: a list of numbers(string)
+> - come at least two methods to solve this problem.
+
 #### Solution:
->- High Level:
+> - High Level:
 >  
->- Algorithm Knowledge:
+> - Algorithm Knowledge:
 >
->- Code Tricks:
+> - Code Tricks:
 >
+
 #### Code:
 ```python
 
@@ -22,11 +26,11 @@
 
 ### [Q2] -  Shortest Cycle in a Graph
 #### Solution:
->- High Level:
+> - High Level:
 >  
->- Algorithm Knowledge:
+> - Algorithm Knowledge:
 >
->- Code Tricks:
+> - Code Tricks:
 >
 #### Code:
 ```python
