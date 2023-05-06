@@ -1,9 +1,9 @@
-## Algorithm Problem Solving
+## Codeforce Round #870 (Div. 2)
 
-**05/05/2023**
+**05/06/2023**
 
 
-### [Q1]
+### [A]
 #### Solution:
 
 - High Level:
@@ -17,13 +17,11 @@
 
 
 #### Code:
-```python
+```cpp
 ```
 
-```java
-```
 
-### [Q2] -  Shortest Cycle in a Graph
+### [B] -  Shortest Cycle in a Graph
 
 #### Solution:
 
@@ -38,14 +36,10 @@
 
 #### Code:
 
-```python
+```cpp
 ```
 
 
-#### Java
-
-```java
-```
 
 #### Related Problems:
 
