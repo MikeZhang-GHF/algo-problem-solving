@@ -3,7 +3,7 @@
 **//2023**
 
 #### 核心思想
-> 适用的场景，主要在线性的数据结构上。
+> 适用的场景，
 > 
 
 #### 代码模板 
@@ -13,4 +13,4 @@
  
 
 [//]: # 
-   [Q34]: <https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/description/>
+   [Q]: <https://leetcode.cn/problems/maximum-or/description/>
