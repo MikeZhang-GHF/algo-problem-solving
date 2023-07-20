@@ -103,7 +103,7 @@ class Trie:
 > - 关键字，改变一个字符，在字符串集合中查找字符串，本质上是查找字符串个数。并且多次询问。Trie非常擅长处理词频统计。
 > - 本质上，是在Trie树上统计一些信息，统计的就是改变一个字符的情况下，是否有一个字符串可以匹配。在树上做dfs即可。
 > - 时间复杂度: O($C^L$)
-> - 空间复杂度: O($N \times L \times C$) $N = 100$ 存入Trie最多个数，$L = 100$存入字符串的最大长度，$C = 26$为字符集大小。
+> - 空间复杂度: O($N \times L \times C$) $N = 100$ 存入Trie最多个数，$L = 100$ 存入字符串的最大长度，$C = 26$ 为字符集大小。
 
 ```python
 class Node:
@@ -147,6 +147,8 @@ class MagicDictionary:
 
         return dfs(searchWord, self.root, 0, 0)
 ```
+
+[139] 
 
 [//]: # 
    [Q208]: <https://leetcode.com/problems/implement-trie-prefix-tree/>
