@@ -68,3 +68,6 @@ nums = [1, 2, 3, 4, 5, 6]
 for _ in range(len(nums)):
     nums = next(permutations(nums))
     print(nums)
+
+x = 10
+print(2 << x.bit_length())
