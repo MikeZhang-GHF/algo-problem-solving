@@ -71,3 +71,4 @@ for _ in range(len(nums)):
 
 x = 10
 print(2 << x.bit_length())
+
