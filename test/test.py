@@ -71,6 +71,7 @@ for _ in range(len(nums)):
 
 x = 10
 print(2 << x.bit_length())
+<<<<<<< HEAD:src/algo-classic/test.py
 
 
 import difflib
@@ -80,3 +81,6 @@ new_text = "Hello world!\nThis is the new text.\n"
 
 diff = difflib.unified_diff(old_text.splitlines(keepends=True), new_text.splitlines(keepends=True))
 print(''.join(diff))
+=======
+    
+>>>>>>> 6d7230e723cb45049674d9c1b4fb90b40c468e6b:test/test.py
