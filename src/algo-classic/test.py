@@ -71,3 +71,12 @@ for _ in range(len(nums)):
 
 x = 10
 print(2 << x.bit_length())
+
+
+import difflib
+
+old_text = "Hello world!\nThis is the old text.\n"
+new_text = "Hello world!\nThis is the new text.\n"
+
+diff = difflib.unified_diff(old_text.splitlines(keepends=True), new_text.splitlines(keepends=True))
+print(''.join(diff))
