@@ -147,10 +147,56 @@ class MagicDictionary:
 
         return dfs(searchWord, self.root, 0, 0)
 ```
+[Q648] - Replace Words
+> 使用最短前缀来取代单词，适合使用Trie来解决。
+> 使用一个idx来维护原有字典内的单词的下标。
 
-[139] 
+```python
+class Node:
+    __slot__ = 'son', 'idx'
+
+    def __init__(self):
+        self.son = defaultdict(Node)
+        self.idx = -1
+
+class Trie:
+
+    def __init__(self):
+        self.root = Node()
+    
+    def insert(self, word: str, idx: int) -> None:
+        cur = self.root
+        for c in word:
+            cur = cur.son[c]
+        cur.idx = idx
+
+    def startWith(self, word: str) -> int:
+        cur = self.root
+        for c in word:
+            cur = cur.son[c]
+            if cur.idx != -1:
+                return cur.idx
+        return -1
+
+
+class Solution:
+    def replaceWords(self, dictionary: List[str], sentence: str) -> str:
+        trie = Trie()
+        for i, word in enumerate(dictionary):
+            trie.insert(word, i)
+        ans = []
+        for word in sentence.split(' '):
+            idx = trie.startWith(word)
+            if idx != -1:
+                word = dictionary[idx] 
+            ans.append(word)
+        return ' '.join(ans)
+```
+
+[Q139] 
 
 [//]: # 
    [Q208]: <https://leetcode.com/problems/implement-trie-prefix-tree/>
    [Q139]: <https://leetcode.com/problems/word-break/>
    [Q676]: <https://leetcode.com/problems/implement-magic-dictionary/description/>
+   [Q648]: <https://leetcode.com/problems/replace-words/description/>
