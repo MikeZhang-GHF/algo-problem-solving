@@ -251,6 +251,44 @@ class Solution:
         return ans
 ```
 
+[Q834] - Sum of Distances in Tree
+
+> 思考，计算以**0 为根**换到以**2 为根**的时候，原来 2 的子节点还是 2 的子节点，原来 1 的子节点还是 1 的的子节点，唯一变化的是 0 和 2 的父子关系。由此可以推测，一对节点的距离的**变化量**应该很小，找出变化量的规律，就可以基于`ans[0]`计算`ans[2]`了。这就是换根 DP。
+
+```python
+class Solution:
+    def sumOfDistancesInTree(self, n: int, edges: List[List[int]]) -> List[int]:
+        g = [[] for _ in range(n)]
+        for x, y in edges:
+            g[x].append(y)
+            g[y].append(x)
+
+        ans = [0] * n
+        size = [1] * n
+        # 计算根节点0到每个点的距离，同时维护每个点的子树大小，就是子树中点的个数
+        def dfs(x: int, fa: int, depth: int) -> None:
+            ans[0] += depth # 计算节点x到0的距离
+            for y in g[x]:
+                if y == fa: # 跳过父节点
+                    continue
+                dfs(y, x, depth + 1) # 计算子树的信息
+                size[x] += size[y] # 累加x的儿子子树大小
+        dfs(0, -1, 0)
+
+        # 换根计算每个点的距离，x->y
+        # 相当于x的子树中每个节点(size[x])都进近了1，变化量-size[y]
+        # 和不在子树中的点(n-size[x])都远了1，变化量+(n-size[y])
+        # ans[y] = ans[x] + (n - size[y]) - size[y] = ans[x] + n - 2*size[y]
+        def reroot(x: int, fa: int) -> None:
+            for y in g[x]:
+                if y == fa:
+                    continue
+                ans[y] = ans[x] + n - 2 * size[y]
+                reroot(y, x)
+        reroot(0, -1)
+        return ans
+```
+
 [//]: #
 [Q543]: https://leetcode.com/problems/diameter-of-binary-tree/
 [Q124]: https://leetcode.com/problems/binary-tree-maximum-path-sum/
@@ -259,3 +297,4 @@ class Solution:
 [Q1245]: https://leetcode.com/problems/tree-diameter/
 [Q2538]: https://leetcode.com/problems/difference-between-maximum-and-minimum-price-sum/
 [Q2581]: https://leetcode.com/problems/count-number-of-possible-root-nodes/
+[Q834]: https://leetcode.com/problems/sum-of-distances-in-tree/
