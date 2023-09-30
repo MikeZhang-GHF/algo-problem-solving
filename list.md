@@ -1,6 +1,6 @@
 ### Basic
 
-#### 24
+#### 基本经典算法
 
 [x] 1-4 双指针
 [x] 5 二分
@@ -22,14 +22,23 @@
 [x] 21 状态机
 [x] 22 区间 DP
 [x] 23-24 树形 DP
+[] 25 树形 DP
 
 ### Leetcode Weekly and BiWeekly Contest
 
 #### 106
 
-[x] 359
-[x] 360
-[x] 308
+-   weekly
+    [x] 308
+    [x] 359
+    [x] 360
+
+-   byweekly
+    [] 90
+    [] 91
+    [] 92
+    [] 93
+    [] 94
 
 ### Code Force
 
